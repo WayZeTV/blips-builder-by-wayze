@@ -1,6 +1,6 @@
 local blips = {
     -- Exemple {title="", colour=, id=, x=, y=, z=},
-        {title=Exemple, colour=35, id=84, x = 0.00, y = 0.00, z = 0.00}
+   {title="Exemple", colour=35, id=84, x = 0.00, y = 0.00, z = 0.00}
   }
 
 Citizen.CreateThread(function()
@@ -12,7 +12,7 @@ Citizen.CreateThread(function()
       SetBlipScale(info.blip, 0.9)
       SetBlipColour(info.blip, info.colour)
       SetBlipAsShortRange(info.blip, true)
-	  BeginTextCommandSetBlipName("STRING")
+      BeginTextCommandSetBlipName("STRING")
       AddTextComponentString(info.title)
       EndTextCommandSetBlipName(info.blip)
     end
